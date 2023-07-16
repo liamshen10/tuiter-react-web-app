@@ -1,0 +1,140 @@
+body {
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif;
+    padding: 12px;
+}
+
+.wd-navigation {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.wd-back-icon{
+    margin: 12px;
+}
+
+.wd-all-bookmarks{
+    padding-left: 30px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.wd-header-align {
+    position:absolute;
+    right: 0;
+    padding-right: 35px;
+}
+
+.wd-tuit {
+    border: 1px solid lightgray;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+}
+
+.wd-tuit-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.wd-more-options {
+    position: absolute;
+    right: 0;
+    color: darkgray;
+}
+
+.wd-profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+
+.wd-profile-name{
+    font-weight: bold;
+}
+    
+.wd-verified {
+    margin-left: 5px;
+    color:skyblue;
+}
+
+.wd-username-date{
+    padding: 5px;
+    color:darkgray;
+}
+
+.wd-dot{
+    font-size: 5px;
+    color:darkgray;
+}
+
+
+.wd-tuit-content {
+    margin-top: -10px;
+    margin-left: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height:23px;
+}
+
+.wd-tuit-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    margin-left: 60px;
+    align-items: center;
+    
+}
+
+.wd-icon {
+    color: gray;
+}
+
+.wd-link-card {
+    margin-top: 30px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+
+}
+
+.wd-link-card-content {
+    margin-left: 10px;
+}
+
+.wd-link-card-image {
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.wd-link-edit {
+    text-decoration: none;
+    color: black;
+}
+
+.wd-content {
+    color: black;
+    font-size: 14px;
+}
+
+.wd-footer-response{
+    font-size: 16px;
+    color: darkgray;
+    padding-left: 12px;
+    font-weight:normal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wd-link-decorater{
+    color: skyblue;
+    text-decoration: none;
+}
+
+.wd-like{
+    color:hotpink;
+}

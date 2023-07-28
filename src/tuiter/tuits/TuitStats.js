@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaRegComment, FaRetweet, FaRegHeart, FaShareSquare, FaHeart } from 'react-icons/fa';
 
 const TuitStats = ({ tuit }) => {
-  const [liked, setLiked] = useState(true);
+  const [liked, setLiked] = useState(false);
   const [likes, setLikes] = useState(tuit.likes);
 
   const handleLike = () => {

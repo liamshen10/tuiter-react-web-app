@@ -1,6 +1,14 @@
 import React, {useState} from "react";
 import {createTuit} from "./reducers/tuits-reducer";
 import {useDispatch} from "react-redux";
+import { AiOutlinePicture } from 'react-icons/ai';
+import { HiOutlineGift } from 'react-icons/hi';
+import { MdFormatListBulleted } from 'react-icons/md';
+import { BsEmojiSmile } from 'react-icons/bs';
+import { TbCalendarStats } from 'react-icons/tb';
+import { HiOutlineLocationMarker } from 'react-icons/hi';
+import { BiBold, BiItalic } from 'react-icons/bi';
+
 
 const WhatsHappening = () => {
  let [whatsHappening, setWhatsHappening] = useState('');
@@ -29,14 +37,14 @@ const WhatsHappening = () => {
            Tuit
          </button>
          <div className="text-primary fs-2">
-           <i AiOutlinePicture className="me-3"></i>
-           <i HiOutlineGif className="me-3"></i>
-           <i MdFormatListBulleted className="me-3"></i>
-           <i BsEmojiSmile className="me-3"></i>
-           <i TbCalendarStats className="me-3"></i>
-           <i HiOutlineLocationMarker className="me-3"></i>
-           <i BiBold className="me-3"></i>
-           <i BiItalic className="me-3"></i>
+           <AiOutlinePicture className="me-3"/>
+           <HiOutlineGift className="me-3"/>
+           <MdFormatListBulleted className="me-3"/>
+           <BsEmojiSmile className="me-3"/>
+           <TbCalendarStats className="me-3"/>
+           <HiOutlineLocationMarker className="me-3"/>
+           <BiBold className="me-3"/>
+           <BiItalic className="me-3"/>
          </div>
        </div>
      </div>

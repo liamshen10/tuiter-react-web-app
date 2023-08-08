@@ -2,13 +2,13 @@ import React from 'react';
 import TuitStats from './TuitStats';
 import { FaCheckCircle } from 'react-icons/fa';
 import {useDispatch} from "react-redux";
-import { deleteTuit } from '../reducers/tuits-reducer';
+import {deleteTuitThunk} from "../services/tuits-thunks";
 import { FiX } from 'react-icons/fi'; 
 
 const TuitItem = ({ tuit }) => {
   const dispatch = useDispatch();
   const deleteTuitHandler = (id) => {
-    dispatch(deleteTuit(id));
+    dispatch(deleteTuitThunk(id));
   }
   return (
     <li className="list-group-item">

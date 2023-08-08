@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import { useDispatch } from "react-redux";
-import { registerThunk } from "../services/auth-thunks";
+import { register } from "../services/auth-thunks";
 
 function RegisterScreen() {
  const [username, setUsername] = useState("");
@@ -15,12 +15,15 @@ function RegisterScreen() {
     return;
   }
   try {
-    await dispatch(registerThunk({username, password}));
+    const resultAction =await dispatch(register({username, password}));
+    if (register.rejected.match(resultAction)) {
+      throw new Error('Registration failed');
+    }
     navigate("/tuiter/profile");
   } catch (e) {
-    alert(e);
+    alert('Username already exists');
   }
- };
+}
 
  return (
     <div>

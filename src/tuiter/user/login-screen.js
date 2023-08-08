@@ -9,12 +9,16 @@ function LoginScreen() {
  const dispatch = useDispatch();
  const handleLogin = async () => {
   try {
-    await dispatch(loginThunk({ username, password }));
+    const resultAction = await dispatch(loginThunk({ username, password }));
+    if (loginThunk.rejected.match(resultAction)) {
+      throw new Error('Login failed');
+    }
     navigate("/tuiter/profile");
   } catch (e) {
-    alert(e);
+    alert('Username or Password does not exist');
   }
- };
+}
+  
  return (
   <div>
    <h1>Login Screen</h1>

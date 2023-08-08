@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";  
-import { FiHome, FiSearch, FiBell, FiMail, FiBookmark, FiList, FiUser, FiMoreHorizontal } from "react-icons/fi";
+import { FiUserPlus, FiLogIn, FiHome, FiSearch, FiBell, FiMail, FiBookmark, FiList, FiUser, FiMoreHorizontal } from "react-icons/fi";
 
 const NavigationSidebar = () => {
   const { currentUser } = useSelector((state) => state.user);
@@ -14,9 +14,16 @@ const NavigationSidebar = () => {
     { name: "messages", icon: <FiMail /> },
     { name: "bookmarks", icon: <FiBookmark /> },
     { name: "lists", icon: <FiList /> },
-    { name: "profile", icon: <FiUser /> },
     { name: "more", icon: <FiMoreHorizontal /> }
   ];
+
+  if (!currentUser) {
+    links.push({ name: "login",icon: <FiLogIn /> });
+    links.push({ name: "register", icon: <FiUserPlus />});
+  } else {
+    links.push({ name: "profile", icon: <FiUser /> });
+  }
+
   return (
     <div className="list-group">
       {links.map(({ name, icon }) => 
@@ -24,10 +31,8 @@ const NavigationSidebar = () => {
           {icon} {name}
         </Link>
       )}
-      {!currentUser && <Link className="list-group" to="/tuiter/login">   Login   </Link>}
-     {!currentUser && <Link className="list-group" to="/tuiter/register">Register</Link>}
-     { currentUser && <Link className="list-group" to="/tuiter/profile"> Profile </Link>}
     </div>
   );
 };
+
 export default NavigationSidebar;

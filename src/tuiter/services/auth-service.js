@@ -21,7 +21,7 @@ export const logout = async () => {
   return response;
  };
  export const updateUser = async (credentials, user) => {
-  const response = await api.put(`${USERS_URL}/:uid`, { credentials, user });
+  const response = await api.put(`${USERS_URL}/${user.uid}`, { credentials, user });
   console.log(response);
   return response.data;
 };

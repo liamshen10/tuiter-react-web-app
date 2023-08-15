@@ -10,7 +10,9 @@ function ProfileScreen() {
  const dispatch = useDispatch();
  const navigate = useNavigate();
  const save = async () => {
-  await dispatch(updateUserThunk({ profile }));
+  const credentials = { username: profile.username, password: profile.password };
+  console.log('Saving profile with credentials:', credentials, 'and profile:', profile);
+  await dispatch(updateUserThunk({ credentials, user: profile }));
 };
 
  useEffect(() => {

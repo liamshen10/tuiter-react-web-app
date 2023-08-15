@@ -17,11 +17,11 @@ const NavigationSidebar = () => {
     { name: "more", icon: <FiMoreHorizontal /> }
   ];
 
-  if (currentUser) {
-    links.push({ name: "profile", icon: <FiUser /> });
-  } else {
+  if (!currentUser) {
     links.push({ name: "login",icon: <FiLogIn /> });
     links.push({ name: "register", icon: <FiUserPlus />});
+  } else {
+    links.push({ name: "profile", icon: <FiUser /> });
   }
 
   return (

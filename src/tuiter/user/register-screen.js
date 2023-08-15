@@ -15,7 +15,7 @@ function RegisterScreen() {
     return;
   }
   try {
-    const resultAction =await dispatch(register({username, password}));
+    const resultAction =await dispatch(register({username, password, firstName: "", lastName: ""}));
     if (register.rejected.match(resultAction)) {
       throw new Error('Registration failed');
     }

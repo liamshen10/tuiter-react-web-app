@@ -20,15 +20,14 @@ export const profileThunk = createAsyncThunk(
   "auth/logout", async () => {
   return await authService.logout();
  });
- export const updateUserThunk = createAsyncThunk(
-  "user/updateUser",
-  async ({ credentials, user }, thunkAPI) => {
-    console.log('Calling updateUser with credentials:', credentials, 'and user:', user);
-    const updatedUser = await authService.updateUser(credentials, user);
-    console.log('Updated user received:', updatedUser);
-    return updatedUser;
-  }
-);
+
+
+export const updateUserThunk = createAsyncThunk(
+ "user/updateUser", async (user) => {
+   await authService.updateUser(user);
+   return user;
+});
+
 
 
 
